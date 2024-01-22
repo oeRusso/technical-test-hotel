@@ -41,10 +41,10 @@
     </form>
     <br>
 
-    <a class="btn btn-secondary" href="cantidadReserva.php" role="button">Usuarios con Reservas</a>
+    <a class="btn btn-secondary" href="http://localhost/prueba-tecnica-hotel/vistas/cantidadReserva.php" role="button">Usuarios con Reservas</a>
     <br>
     <br>
-    <a class="btn btn-info" href="nuevaReserva.php" role="button">Nueva Reserva</a>
+    <a class="btn btn-info" href="http://localhost/prueba-tecnica-hotel/vistas/formReserva.php" role="button">Nueva Reserva</a>
 </body>
 
 </html>
