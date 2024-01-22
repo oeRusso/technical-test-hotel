@@ -1,0 +1,35 @@
+PREGUNTA 1: Manejo de Datos en Tránsito y Persistencia: Explica cómo manejarías la seguridad de los 
+datos en tránsito (durante la comunicación entre el cliente y el servidor) y la persistencia de 
+datos (almacenamiento a largo plazo) en el sistema de reservas. ¿Qué tecnologías y prácticas 
+considerarías?
+RESPUESTA 1:
+Seguridad de Datos en Tránsito:
+
+Protocolo HTTPS:Utiliza siempre HTTPS para cifrar la comunicación entre el cliente y el servidor. Esto se logra mediante un certificado SSL/TLS.
+Certificados SSL/TLS:Adquiere un certificado SSL/TLS de una autoridad de certificación confiable para establecer una conexión segura y autenticada.
+Cifrado de Datos:tiliza algoritmos de cifrado fuertes para proteger los datos en tránsito. Asegúrate de que tu servidor web esté configurado para utilizar cifrado TLS 1.2 o superior.
+Headers de Seguridad:Configura adecuadamente los headers de seguridad HTTP, como Content Security Policy (CSP) y HTTP Strict Transport Security (HSTS), para mejorar la seguridad del navegador.
+
+Persistencia de Datos:
+
+Base de Datos Segura:Asegúrate de que tu base de datos esté protegida con credenciales fuertes y que solo permita conexiones desde ubicaciones autorizadas.
+Consultas Parametrizadas:Utiliza consultas parametrizadas o preparadas para evitar inyecciones SQL y garantizar la seguridad de las consultas a la base de datos.
+Backup Regular:Implementa un plan de backup regular para asegurar la disponibilidad de los datos en caso de pérdida o corrupción.
+Encriptación de Datos Sensibles:Si almacenas datos sensibles en la base de datos, considera la posibilidad de encriptarlos para añadir una capa adicional de seguridad.
+Gestión de Sesiones:Implementa una gestión de sesiones segura para autenticar y autorizar a los usuarios, evitando accesos no autorizados a las funciones del sistema.
+Actualizaciones de Software:Mantén actualizado el software del servidor web, la base de datos y cualquier otro componente relevante para asegurar que estén protegidos contra vulnerabilidades conocidas.
+
+Tecnologías Específicas:
+
+Framework de Desarrollo:Utiliza un framework de desarrollo PHP moderno que tenga en cuenta las mejores prácticas de seguridad.
+Librerías de Seguridad:Incorpora librerías de seguridad como password_hash() para el manejo seguro de contraseñas y htmlspecialchars() para prevenir ataques XSS.
+Firewalls:Configura firewalls para proteger el servidor contra intentos de acceso no autorizado.
+
+PREGUNTA 2:Seguridad en la Reserva de Habitaciones: ¿Qué medidas de seguridad implementarías para 
+prevenir problemas como la reserva de una habitación que ya está ocupada? Considera la 
+concurrencia y cómo manejarías situaciones en las que varios clientes intentan reservar la 
+misma habitación simultáneamente.
+
+RESPUESTA 2: Yo resolvi ambos problemas con una adecuada consulta, tambien utilizar marcas de tiempo (timestamps) en los registros de base de datos y comprobarlas durante el proceso de reserva para detectar conflictos. Si dos reservas coinciden en el tiempo, puedes aplicar reglas predefinidas para resolver el conflicto.
+
+
