@@ -12,7 +12,7 @@ if (count($_POST) > 0) {
     $r_habitaciones =$_POST['registro_habitaciones'];
     $precio = $_POST['precio'];
     $check_in = $_POST['check_in'] ;
-    $check_out =  $_POST['check_out']; //mañana ver q onda esto si los podes solo asignar los datos q llean por post
+    $check_out =  $_POST['check_out']; 
 
 
     $nuevoRegistro = new Hotel();
